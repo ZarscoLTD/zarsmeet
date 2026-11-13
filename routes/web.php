@@ -9,11 +9,8 @@ use Illuminate\Support\Facades\Route;
 // sidebar/bottom nav like any other section now.
 // a signed-in person goes to chat; a visitor sees the product website (owner 2026-11-13: sales pages and pricing like Teams)
 Route::get('/', function () {
-    return auth()->check() ? redirect()->route('chat.index') : response()->view('site.home');
+    return auth()->check() ? redirect()->route('chat.index') : redirect()->route('login');
 })->name('home');
-Route::view('features', 'site.features')->name('site.features');
-Route::view('pricing', 'site.pricing')->name('site.pricing');
-Route::view('download', 'site.download')->name('site.download');
 
 Route::get('manifest.json', [PwaController::class, 'manifest'])->name('pwa.manifest');
 
