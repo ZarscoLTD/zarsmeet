@@ -1,0 +1,9 @@
+{
+    "name": "zarsco/mailbox",
+    "description": "ZarsMeet Mail",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Mailbox\\": ""
+        }
+    }
+}

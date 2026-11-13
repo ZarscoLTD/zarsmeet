@@ -1,0 +1,11 @@
+{
+    "name": "Mailbox",
+    "alias": "mailbox",
+    "description": "ZarsMeet Mail: own address, IMAP/SMTP accounts (Gmail, Yahoo, Rediffmail, Zoho, Outlook), Google sync",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Mailbox\\Providers\\MailboxServiceProvider"
+    ],
+    "files": []
+}
