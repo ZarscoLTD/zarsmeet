@@ -53,4 +53,14 @@ class CpanelSetupTest extends TestCase
         }
         $this->artisan('mail:cpanel-setup')->assertSuccessful();
     }
+
+    public function test_the_shared_zarsx_mail_router_is_left_in_place(): void
+    {
+        Http::fake(['*list_default_address*' => Http::response(['status' => 1, 'data' => [['domain' => 'zarsx.in', 'defaultaddress' => '|/home/u/zarsx-mail-pipe.php']]]),
+            '*set_default_address*' => Http::response(['status' => 0, 'errors' => ['must not be called']])]);
+        $r = CpanelMail::ensure();
+        $this->assertSame('ok', $r['status']);
+        $this->assertStringContainsString('router', $r['message']);
+        Http::assertNotSent(fn ($q) => str_contains($q->url(), 'set_default_address') && str_contains($q->url(), 'domain=zarsx.in'));
+    }
 }
