@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
 
-/** The festive offer set in ZARS Insights shows on Meet's pages; nothing breaks when Insights is not reachable. */
+/** The festive offer set in Insights by ZARSX shows on Meet's pages; nothing breaks when Insights is not reachable. */
 class OfferBannerTest extends TestCase
 {
     use RefreshDatabase;

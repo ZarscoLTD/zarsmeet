@@ -143,7 +143,7 @@ class MailSettingsController extends Controller
         return back()->with('status', $a->last_error ? __('Sync failed: :e', ['e' => $a->last_error]) : __(':n new messages.', ['n' => $n]));
     }
 
-    /** Adds the company mailboxes of the person's ZARSX Insights login (and reads their mail right away). */
+    /** Adds the company mailboxes of the person's Insights by ZARSX login (and reads their mail right away). */
     public function insightsConnect()
     {
         try {
@@ -152,7 +152,7 @@ class MailSettingsController extends Controller
             return back()->withErrors(['insights' => $e->getMessage()]);
         }
         if (!$accounts) {
-            return back()->withErrors(['insights' => __('Your ZARSX Insights login has no company mailbox yet. Ask your organization admin to give you an address in Mail Hub.')]);
+            return back()->withErrors(['insights' => __('Your Insights by ZARSX login has no company mailbox yet. Ask your organization admin to give you an address in Mail Hub.')]);
         }
         $n = 0;
         foreach ($accounts as $a) {

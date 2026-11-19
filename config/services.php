@@ -43,14 +43,14 @@ return [
         'port' => (int) env('CPANEL_PORT', 2083),
     ],
 
-    // Signed entry links from ZARSX Insights (same secret as Insights > Control center > Integrations > Meet)
+    // Signed entry links from Insights by ZARSX (same secret as Insights > Control center > Integrations > Meet)
     'insights' => [
         'sso_secret' => env('INSIGHTS_SSO_SECRET', ''),
         'audience' => env('INSIGHTS_SSO_AUDIENCE', 'meet'),
         'url' => env('INSIGHTS_URL', 'https://insights.zarsx.in'),
     ],
 
-    // Pass for the free Zars tools served by ZARSX Insights (same secret as TOOLS_PASS_SECRET in Insights)
+    // Pass for the free Zars tools served by Insights by ZARSX (same secret as TOOLS_PASS_SECRET in Insights)
     'tools' => [
         'pass_secret' => env('TOOLS_PASS_SECRET', ''),
         'hosts' => env('TOOLS_PASS_HOSTS', 'zarsx.in,zarsx.com,zarsco.in,zarsco.com,zarsmatrix.com'),

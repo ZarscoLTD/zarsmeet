@@ -40,10 +40,10 @@ Route::middleware('guest')->group(function () {
     });
 });
 
-// Signed one-time entry link from ZARSX Insights (works whether or not someone is signed in here)
+// Signed one-time entry link from Insights by ZARSX (works whether or not someone is signed in here)
 Route::get('sso/insights', [InsightsSsoController::class, 'enter'])->middleware('throttle:30,1,auth-web')->name('sso.insights');
 
-// Free Zars tools on ZARSX Insights: sign up / log in here, go back with a signed pass (see ToolsPassController)
+// Free Zars tools on Insights by ZARSX: sign up / log in here, go back with a signed pass (see ToolsPassController)
 Route::middleware(['auth', 'throttle:30,1,auth-web'])->get('tools/pass', ToolsPassController::class)->name('tools.pass');
 
 Route::middleware('auth')->post('logout', [WebAuthController::class, 'logout'])->name('logout');

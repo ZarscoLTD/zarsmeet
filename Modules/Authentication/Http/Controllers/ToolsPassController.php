@@ -7,7 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 /**
- * Free Zars tools (ZarsWord, ZarsGrid ... served by ZARSX Insights) ask visitors to sign up / log in with Meet.
+ * Free Zars tools (ZarsWord, ZarsGrid ... served by Insights by ZARSX) ask visitors to sign up / log in with Meet.
  * /tools/pass?return=<tool page> (signed-in users only; sign-up and login come back here) sends the visitor back with
  * ?zpass=<token>: base64url(json {uid, name, email, exp}) "." hex HMAC-SHA256(body, TOOLS_PASS_SECRET), valid 12 hours.
  * Only addresses on the company domains are accepted as return targets; no Meet data other than name and e-mail leaves.

@@ -16,7 +16,7 @@ use Modules\Mailbox\Services\DriveArchive;
 use Modules\Mailbox\Services\Mailbox;
 
 /**
- * ZARSX Insights reads and sends the person's ZARSX address (name.user@zarsx.in) in its Mail Hub, and (owner 2026-11-11: the same
+ * Insights by ZARSX reads and sends the person's ZARSX address (name.user@zarsx.in) in its Mail Hub, and (owner 2026-11-11: the same
  * mail in both places) the accounts the person added here (IMAP, Gmail). Accounts that came from Insights (kind "insights") are not
  * offered back. Calls without "account" mean the ZARSX address (older Insights versions).
  * Every call carries "Authorization: Bearer <token>" signed by Insights with the shared INSIGHTS_SSO_SECRET

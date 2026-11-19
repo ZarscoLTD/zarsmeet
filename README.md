@@ -1,7 +1,7 @@
 # ZARSX Meet Community
 
 Chat, voice and video calls, meetings with captions, recording and breakout rooms, mail and calendar - self-hosted.
-Community edition 1.9.0 of ZARSX Meet by Zars Company (ZARSCO). Free to use, no licence key and no fee (see LICENSE for
+Community edition 2.0.0 of ZARSX Meet by Zars Company (ZARSCO). Free to use, no licence key and no fee (see LICENSE for
 the short terms). Only the basic needs; updated when needed.
 
 ## Install

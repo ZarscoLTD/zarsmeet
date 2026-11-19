@@ -42,7 +42,7 @@
         </button>
     </form>
 
-    <x-auth.insights-button label="Quick sign up with ZARSX Insights" />
+    <x-auth.insights-button label="Quick sign up with Insights by ZARSX" />
 
     <p class="mt-6 text-center text-sm text-gray-500">
         Already have an account?
